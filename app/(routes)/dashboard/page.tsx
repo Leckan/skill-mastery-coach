@@ -1,6 +1,7 @@
 import React from 'react'
 import WelcomeBanner from './_components/WelcomeBanner'
 import AiToolsList from './_components/AiToolsList'
+import History from './_components/History'
 
 function Dashboard() {
     return (
@@ -8,6 +9,7 @@ function Dashboard() {
             
         <WelcomeBanner />
         <AiToolsList/>
+        <History/>
         </div>
     )
 }
