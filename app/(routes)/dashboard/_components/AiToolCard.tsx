@@ -1,8 +1,31 @@
+import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 import React from 'react'
+export interface TOOL {
+    name: string,
+    desc: string,
+    icon: string,
+    button: string,
+    path: string
+}
 
-function AiToolCard() {
+type AIToolProps = {
+    tool: TOOL
+}
+
+function AiToolCard({tool}: AIToolProps) {
   return (
-    <div>AiToolCard</div>
+    <div className='p-3 border rounded-lg '>
+            <Image src={tool.icon} width={40} height={40} alt={tool.name} />
+            <h2 className='font-bold mt-2'>{tool.name}</h2>
+            <p className='text-gray-400'>{tool.desc}</p>
+
+            <Button className='w-full mt-3'
+                //onClick={onClickButton}
+            >{tool.button}</Button>
+
+           
+        </div>
   )
 }
 
