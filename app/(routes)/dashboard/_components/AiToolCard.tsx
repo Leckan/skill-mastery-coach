@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 
 import React, { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
-//import ResumeUploadDialog from './ResumeUploadDialog';
+import ResumeUploadDialog from './ResumeUploadDialog';
 //import RoadmapGeneratorDialog from './RoadmapGeneratorDialog';
 export interface TOOL {
     name: string,
@@ -60,9 +60,9 @@ function AiToolCard({ tool }: AIToolProps) {
                 onClick={onClickButton}
             >{tool.button}</Button>
 
-           {/*  <ResumeUploadDialog openResumeUpload={openResumeUpload}
+            <ResumeUploadDialog openResumeUpload={openResumeUpload}
                 setOpenResumeDialog={setOpenResumeUpload} />
-            <RoadmapGeneratorDialog
+          {/*   <RoadmapGeneratorDialog
                 openDialog={openRoadmapDialog}
                 setOpenDialog={() => setOpenRoadmapDialog(false)}
             /> */}
